@@ -35,6 +35,13 @@ const style = ({colors, font}: any) => {
 
     title {
       display: unset;
+      font-size: ${font.sizes.title}rem;
+      color: ${colors.ternary[500]};
+    }
+
+    a {
+      color: ${colors.ternary[500]};
+      text-decoration: none;
     }
   `;
 };
