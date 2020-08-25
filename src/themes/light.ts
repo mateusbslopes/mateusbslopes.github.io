@@ -13,7 +13,7 @@ export default {
   font: {
     sizes: {
       title: 1.6,
-      base: 20,
+      base: 16,
     },
     family:
       `-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
