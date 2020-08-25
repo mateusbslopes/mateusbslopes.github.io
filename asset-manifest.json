@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.js": "/mateusbslopes.github.com/static/js/main.faca50b2.chunk.js",
-    "main.js.map": "/mateusbslopes.github.com/static/js/main.faca50b2.chunk.js.map",
-    "runtime-main.js": "/mateusbslopes.github.com/static/js/runtime-main.665ec361.js",
-    "runtime-main.js.map": "/mateusbslopes.github.com/static/js/runtime-main.665ec361.js.map",
-    "static/js/2.a478d1a2.chunk.js": "/mateusbslopes.github.com/static/js/2.a478d1a2.chunk.js",
-    "static/js/2.a478d1a2.chunk.js.map": "/mateusbslopes.github.com/static/js/2.a478d1a2.chunk.js.map",
-    "index.html": "/mateusbslopes.github.com/index.html",
-    "precache-manifest.76e75a5b6c47608260c816b492d45459.js": "/mateusbslopes.github.com/precache-manifest.76e75a5b6c47608260c816b492d45459.js",
-    "service-worker.js": "/mateusbslopes.github.com/service-worker.js",
-    "static/js/2.a478d1a2.chunk.js.LICENSE.txt": "/mateusbslopes.github.com/static/js/2.a478d1a2.chunk.js.LICENSE.txt"
+    "main.js": "/mateusbslopes.github.io/static/js/main.ab3e3de2.chunk.js",
+    "main.js.map": "/mateusbslopes.github.io/static/js/main.ab3e3de2.chunk.js.map",
+    "runtime-main.js": "/mateusbslopes.github.io/static/js/runtime-main.004d996b.js",
+    "runtime-main.js.map": "/mateusbslopes.github.io/static/js/runtime-main.004d996b.js.map",
+    "static/js/2.a478d1a2.chunk.js": "/mateusbslopes.github.io/static/js/2.a478d1a2.chunk.js",
+    "static/js/2.a478d1a2.chunk.js.map": "/mateusbslopes.github.io/static/js/2.a478d1a2.chunk.js.map",
+    "index.html": "/mateusbslopes.github.io/index.html",
+    "precache-manifest.df815217de2737fc710e01d0174ad701.js": "/mateusbslopes.github.io/precache-manifest.df815217de2737fc710e01d0174ad701.js",
+    "service-worker.js": "/mateusbslopes.github.io/service-worker.js",
+    "static/js/2.a478d1a2.chunk.js.LICENSE.txt": "/mateusbslopes.github.io/static/js/2.a478d1a2.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.665ec361.js",
+    "static/js/runtime-main.004d996b.js",
     "static/js/2.a478d1a2.chunk.js",
-    "static/js/main.faca50b2.chunk.js"
+    "static/js/main.ab3e3de2.chunk.js"
   ]
 }
