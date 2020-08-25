@@ -1,9 +1,19 @@
 /** @jsx jsx */
-import { jsx, css } from '@emotion/core'
+import { jsx, css } from "@emotion/core";
+import { FormattedMessage } from "react-intl";
 
 export default function Body() {
-  return <body css={style}>Body</body>;
+  return (
+    <div css={style}>
+      <title>
+        <FormattedMessage id="introduction" />
+      </title>
+    </div>
+  );
 }
 
-const style = css`
-`
+const style = ({ font }: any) => css`
+  title {
+    font-size: ${font.sizes.title}rem;
+  }
+`;

@@ -8,7 +8,6 @@ import { IntlProvider } from "react-intl";
 import loadTranslations from "./translations";
 
 function App({ theme, locale }: AppProps) {
-  console.log(loadTranslations(locale));
   return (
     <ThemeProvider theme={(themes as any)[theme]}>
       <IntlProvider locale={locale} messages={loadTranslations(locale)}>
@@ -19,11 +18,23 @@ function App({ theme, locale }: AppProps) {
   );
 }
 
-const style = ({colors}: any) => {
+const style = ({colors, font}: any) => {
   return css`
     html {
       color: ${colors.secundary[900]};  
       background-color: ${colors.primary[100]};
+      font-size: ${font.sizes.base}px;
+      font-family: ${font.family};
+    }
+
+    body {
+      margin: 0;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    title {
+      display: unset;
     }
   `;
 };
