@@ -1,4 +1,10 @@
+import { type } from "os"
+
 export type Theme = {
+  name: string;
+}
+
+export type Localization = {
   name: string;
 }
 
@@ -9,4 +15,8 @@ export type Payload = {
 
 export type ThemePayload = Payload & {
   payload: Theme;
+}
+
+export type LocalizationPayload = Payload & {
+  payload: Localization;
 }

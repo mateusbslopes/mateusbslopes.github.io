@@ -6,5 +6,4 @@ export default function Footer() {
 }
 
 const style = css`
-  background-color: green;
 `

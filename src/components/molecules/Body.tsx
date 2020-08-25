@@ -6,5 +6,4 @@ export default function Body() {
 }
 
 const style = css`
-  background-color: blue;
 `

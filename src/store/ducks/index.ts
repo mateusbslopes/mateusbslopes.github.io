@@ -1,7 +1,7 @@
 import { applyMiddleware, combineReducers, compose, createStore } from "redux";
 import thunkMiddleware from "redux-thunk";
 import theme from "./theme";
-
+import localization from "./localization";
 let store;
 
 const composeEnhancers =
@@ -11,7 +11,8 @@ const composeEnhancers =
 
 store = createStore(
   combineReducers({
-    theme
+    theme,
+    localization,
   }),
   composeEnhancers(applyMiddleware(thunkMiddleware))
 );

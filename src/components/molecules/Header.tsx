@@ -6,5 +6,4 @@ export default function Header() {
 }
 
 const style = css`
-  background-color: red;
 `;
