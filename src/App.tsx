@@ -8,6 +8,7 @@ import { IntlProvider } from "react-intl";
 import loadTranslations from "./translations";
 
 function App({ theme, locale }: AppProps) {
+  console.log(loadTranslations(locale));
   return (
     <ThemeProvider theme={(themes as any)[theme]}>
       <IntlProvider locale={locale} messages={loadTranslations(locale)}>
