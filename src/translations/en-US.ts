@@ -5,7 +5,7 @@ export default {
   // Body
   // Introduction
   introduction: "Introduction",
-  introductionText: "Hi! I'm Mateus Lopes. I'm a frontend developer who is really enjoying study accessibility. And, to be honest this is the main reason i've develop this website :)",
+  introductionText: "Hi! I'm Mateus Lopes. I'm a frontend developer who is really enjoying studing accessibility. And, to be honest this is the main reason i've develop this website :)",
 
   // Work
   jobExperience: "Experience",
