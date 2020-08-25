@@ -10,32 +10,38 @@ export function Header({ locale, setLocale, theme, setTheme }: HeaderProps) {
 
   return (
     <header css={style}>
-      <label>
-        <FormattedMessage id="locale" />
-      </label>
-      <select
-        id="locale_selector"
-        onChange={(event) => setLocale(event.target.value)}
-        value={locale}
-        aria-labelledby="locale_selector_label"
-      >
-        <option value="pt-BR">
-          {intl.formatMessage({ id: "portugueseBR" })}
-        </option>
-        <option value="en-US">{intl.formatMessage({ id: "englishUS" })}</option>
-      </select>
-      <label id="theme_selector_label">
-        <FormattedMessage id="theme" />
-      </label>
-      <select
-        id="theme_selector"
-        aria-labelledby="theme_selector_label"
-        onChange={(event) => setTheme(event.target.value)}
-        value={theme}
-      >
-        <option value="dark">{intl.formatMessage({ id: "dark" })}</option>
-        <option value="light">{intl.formatMessage({ id: "light" })}</option>
-      </select>
+      <div>
+        <label id="locale_selector_label" htmlFor="locale_selector">
+          <FormattedMessage id="locale" />:
+        </label>
+        <select
+          id="locale_selector"
+          onChange={(event) => setLocale(event.target.value)}
+          value={locale}
+          aria-labelledby="locale_selector_label"
+        >
+          <option value="pt-BR">
+            {intl.formatMessage({ id: "portugueseBR" })}
+          </option>
+          <option value="en-US">
+            {intl.formatMessage({ id: "englishUS" })}
+          </option>
+        </select>
+      </div>
+      <div>
+        <label id="theme_selector_label" htmlFor="theme_selector">
+          <FormattedMessage id="theme" />:
+        </label>
+        <select
+          id="theme_selector"
+          aria-labelledby="theme_selector_label"
+          onChange={(event) => setTheme(event.target.value)}
+          value={theme}
+        >
+          <option value="dark">{intl.formatMessage({ id: "dark" })}</option>
+          <option value="light">{intl.formatMessage({ id: "light" })}</option>
+        </select>
+      </div>
     </header>
   );
 }
