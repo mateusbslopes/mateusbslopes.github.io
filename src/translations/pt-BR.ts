@@ -2,9 +2,6 @@ export default {
   // Time
   now: "atualmente",
 
-  // Header
-  Header: "Cabeçalho",
-  
   // Body
   // Introduction
   introduction: "Introdução",
@@ -17,6 +14,10 @@ export default {
   studyExperience: "Formação",
   itTechnician: "Técnico em Informática",
   computingSystems: "Sistemas da Informação",
+
+  // Languages
+  englishUS: "Inglês (EUA)",
+  portugueseBR: "Português (Brasil)",
 
   // Contact
   contact: "Contato",

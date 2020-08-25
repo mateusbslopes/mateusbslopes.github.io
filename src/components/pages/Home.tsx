@@ -2,14 +2,12 @@
 import { jsx, css } from '@emotion/core'
 import Header from "./../molecules/Header";
 import Body from "./../molecules/Body";
-import Footer from "./../molecules/Footer";
 
 export default function Home() {
   return (
     <div css={style}>
       <Header />
       <Body />
-      <Footer />
     </div>
   );
 }

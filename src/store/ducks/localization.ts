@@ -2,7 +2,7 @@ import { LocalizationPayload } from "../../types";
 
 export const SET_LOCALIZATION = "SET_LOCALIZATION";
 
-export const setTheme = (locale: string) => ({
+export const setLocale = (locale: string) => ({
   type: SET_LOCALIZATION,
   payload: { locale }
 });

@@ -78,14 +78,16 @@ export default function Body() {
   );
 }
 
-const JobExperienceDate = ({ value }) => (
+const JobExperienceDate = ({ value }: any) => (
   <FormattedDate value={value} year="numeric" month="short" />
 );
 
-const StudyExperienceDate = ({ value }) => (
+const StudyExperienceDate = ({ value }: any) => (
   <FormattedDate value={value} year="numeric" />
 );
 
 const style = ({ font, sizes }: any) => css`
   padding: ${sizes.margin[500]}px;
+  max-width: 550px;
+  margin: 0 auto;
 `;
