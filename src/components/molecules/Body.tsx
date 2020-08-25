@@ -69,10 +69,26 @@ export default function Body() {
         <title>
           <FormattedMessage id="contact" />
         </title>
-        <p>
-          Email:{" "}
-          <a href="mailto:mateusbslopes@gmail.com">mateusbslopes@gmail.com</a>
-        </p>
+        <div className="contacts">
+          <div>
+            <label id="email_label">Email:</label>
+            <a
+              aria-labelledby="email_label"
+              href="mailto:mateusbslopes@gmail.com"
+            >
+              mateusbslopes@gmail.com
+            </a>
+          </div>
+          <div>
+            <label id="LinkedIn_label">LinkedIn:</label>
+            <a
+              aria-labelledby="LinkedIn_label"
+              href="https://www.linkedin.com/in/mateus-lopes-23062915b/"
+            >
+              link
+            </a>
+          </div>
+        </div>
       </div>
     </div>
   );
@@ -90,4 +106,14 @@ const style = ({ font, sizes }: any) => css`
   padding: ${sizes.margin[500]}px;
   max-width: 550px;
   margin: 0 auto;
+
+  .contacts {
+    display: flex;
+    flex-direction: column;
+    margin-block-start: 1em;
+
+    label {
+      margin-right: 4px;
+    }
+  }
 `;
