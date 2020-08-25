@@ -16,8 +16,14 @@ export default {
   computingSystems: "Computing Systems",
 
   // Languages
+  locale: "Language",
   englishUS: "English (USA)",
   portugueseBR: "Portuguese (Brazil)",
+
+  // Themes
+  theme: "Theme",
+  dark: "Dark",
+  light: "Light",
 
   // Contact
   contact: "Contact",

@@ -16,8 +16,14 @@ export default {
   computingSystems: "Sistemas da Informação",
 
   // Languages
+  locale: "Lingua",
   englishUS: "Inglês (EUA)",
   portugueseBR: "Português (Brasil)",
+
+  // Themes
+  theme: "Tema",
+  dark: "Escuro",
+  light: "Claro",
 
   // Contact
   contact: "Contato",
