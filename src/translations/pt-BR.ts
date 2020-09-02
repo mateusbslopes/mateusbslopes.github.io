@@ -1,6 +1,10 @@
 export default {
   // Time
   now: "atualmente",
+  until: "até",
+  between: "entre",
+  and: 'e',
+  at: "na",
 
   // Body
   // Introduction

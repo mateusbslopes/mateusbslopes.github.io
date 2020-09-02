@@ -1,6 +1,10 @@
 export default {
   // Time
   now: "now",
+  until: "until",
+  between: "between",
+  and: "and",
+  at: "at",
 
   // Body
   // Introduction

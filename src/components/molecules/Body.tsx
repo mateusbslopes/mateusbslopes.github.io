@@ -11,56 +11,48 @@ export default function Body() {
       <p>
         <FormattedMessage id="introductionText" />
       </p>
-      <div>
-        <title>
-          <FormattedMessage id="jobExperience" />
-        </title>
-        <p>
-          <JobExperienceDate value={new Date(2017, 0)} />
-          -
-          <JobExperienceDate value={new Date(2019, 8)} />- Teknisa Software
-        </p>
-        <p>
-          <JobExperienceDate value={new Date(2019, 9)} />
-          -
-          <JobExperienceDate value={new Date(2019, 11)} />- DTI
-        </p>
-        <p>
-          <JobExperienceDate value={new Date(2020, 0)} />
-          -
-          <JobExperienceDate value={new Date(2020, 3)} />- Maxmilhas
-        </p>
-        <p>
-          <JobExperienceDate value={new Date(2020, 4)} />
-          -
-          <JobExperienceDate value={new Date(2020, 6)} />- Freelancer
-          (Lavemcasa)
-        </p>
-        <p>
-          <JobExperienceDate value={new Date(2020, 7)} />
-          -
-          <FormattedMessage id="now" />- DTI
-        </p>
-      </div>
+      <title>
+        <FormattedMessage id="jobExperience" />
+      </title>
+      <ol>
+        <JobExperience
+          startDate={new Date(2017, 0)}
+          endDate={new Date(2019, 8)}
+          companyName="Teknisa Software"
+        />
+        <JobExperience
+          startDate={new Date(2019, 9)}
+          endDate={new Date(2019, 11)}
+          companyName="DTI"
+        />
+        <JobExperience
+          startDate={new Date(2020, 0)}
+          endDate={new Date(2020, 3)}
+          companyName="Maxmilhas"
+        />
+        <JobExperience
+          startDate={new Date(2020, 4)}
+          endDate={new Date(2020, 6)}
+          companyName="Freelancer (Lavemcasa)"
+        />
+        <JobExperience startDate={new Date(2020, 7)} companyName="DTI" />
+      </ol>
       <div>
         <title>
           <FormattedMessage id="studyExperience" />
         </title>
         <p>
-          <StudyExperienceDate value={new Date(2014, 0)} />
-          -
+          <StudyExperienceDate value={new Date(2014, 0)} /> -{" "}
           <StudyExperienceDate value={new Date(2016, 0)} />-
           <FormattedMessage id="itTechnician" /> CEFET-MG
         </p>
         <p>
-          <StudyExperienceDate value={new Date(2018, 0)} />
-          -
+          <StudyExperienceDate value={new Date(2018, 0)} /> -{" "}
           <StudyExperienceDate value={new Date(2019, 0)} />-
           <FormattedMessage id="computingSystems" /> PUC Minas
         </p>
         <p>
-          <StudyExperienceDate value={new Date(2020, 0)} />
-          -
+          <StudyExperienceDate value={new Date(2020, 0)} /> -{" "}
           <FormattedMessage id="now" />-
           <FormattedMessage id="computingSystems" /> FUMEC
         </p>
@@ -95,11 +87,36 @@ export default function Body() {
 }
 
 const JobExperienceDate = ({ value }: any) => (
-  <FormattedDate value={value} year="numeric" month="short" />
+  <FormattedDate value={value} year="numeric" month="long" />
 );
 
 const StudyExperienceDate = ({ value }: any) => (
   <FormattedDate value={value} year="numeric" />
+);
+
+const JobExperience = ({ startDate, endDate, companyName }: any) => (
+  <li>
+    <p aria-hidden>
+      <JobExperienceDate value={startDate} /> -{" "}
+      {endDate ? (
+        <JobExperienceDate value={endDate} />
+      ) : (
+        <FormattedMessage id="now" />
+      )}{" "}
+      - {companyName}
+    </p>
+    <p style={{ display: "none" }} aria-hidden="false">
+      <FormattedMessage id="between" />
+      <JobExperienceDate value={startDate} /> <FormattedMessage id="and" />
+      {endDate ? (
+        <JobExperienceDate value={endDate} />
+      ) : (
+        <FormattedMessage id="now" />
+      )}
+      <FormattedMessage id="at" />
+      {companyName}
+    </p>
+  </li>
 );
 
 const style = ({ font, sizes }: any) => css`
@@ -114,6 +131,13 @@ const style = ({ font, sizes }: any) => css`
 
     label {
       margin-right: 4px;
+    }
+  }
+
+  ol {
+    padding-left: 0;
+    li{
+      list-style-type: none;
     }
   }
 `;
