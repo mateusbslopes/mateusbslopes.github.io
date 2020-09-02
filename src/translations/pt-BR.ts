@@ -5,6 +5,7 @@ export default {
   between: "entre",
   and: 'e',
   at: "na",
+  course: "curso",
 
   // Body
   // Introduction

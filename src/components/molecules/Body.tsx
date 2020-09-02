@@ -37,26 +37,29 @@ export default function Body() {
         />
         <JobExperience startDate={new Date(2020, 7)} companyName="DTI" />
       </ol>
-      <div>
-        <title>
-          <FormattedMessage id="studyExperience" />
-        </title>
-        <p>
-          <StudyExperienceDate value={new Date(2014, 0)} /> -{" "}
-          <StudyExperienceDate value={new Date(2016, 0)} />-
-          <FormattedMessage id="itTechnician" /> CEFET-MG
-        </p>
-        <p>
-          <StudyExperienceDate value={new Date(2018, 0)} /> -{" "}
-          <StudyExperienceDate value={new Date(2019, 0)} />-
-          <FormattedMessage id="computingSystems" /> PUC Minas
-        </p>
-        <p>
-          <StudyExperienceDate value={new Date(2020, 0)} /> -{" "}
-          <FormattedMessage id="now" />-
-          <FormattedMessage id="computingSystems" /> FUMEC
-        </p>
-      </div>
+      <title>
+        <FormattedMessage id="studyExperience" />
+      </title>
+      <ol>
+        <StudyExperience
+          startDate={new Date(2014, 0)}
+          endDate={new Date(2016, 0)}
+          schoolName="CEFET-MG"
+          descritiveSchoolName="Centro Federal de Ensino Tecnológico de Minas Gerais"
+          courseNameId="itTechnician"
+        />
+        <StudyExperience
+          startDate={new Date(2018, 0)}
+          endDate={new Date(2019, 0)}
+          schoolName="PUC Minas"
+          courseNameId="computingSystems"
+        />
+        <StudyExperience
+          startDate={new Date(2020, 0)}
+          schoolName="FUMEC"
+          courseNameId="computingSystems"
+        />
+      </ol>
       <div>
         <title>
           <FormattedMessage id="contact" />
@@ -119,6 +122,40 @@ const JobExperience = ({ startDate, endDate, companyName }: any) => (
   </li>
 );
 
+const StudyExperience = ({
+  startDate,
+  endDate,
+  schoolName,
+  descritiveSchoolName,
+  courseNameId,
+}: any) => (
+  <li>
+    <p aria-hidden>
+      <StudyExperienceDate value={startDate} /> -{" "}
+      {endDate ? (
+        <StudyExperienceDate value={endDate} />
+      ) : (
+        <FormattedMessage id="now" />
+      )}{" "}
+      - <FormattedMessage id={courseNameId} /> <FormattedMessage id="at" />{" "}
+      {schoolName}
+    </p>
+    <p style={{ display: "none" }} aria-hidden="false">
+      <FormattedMessage id="between" />
+      <StudyExperienceDate value={startDate} /> <FormattedMessage id="and" />
+      {endDate ? (
+        <StudyExperienceDate value={endDate} />
+      ) : (
+        <FormattedMessage id="now" />
+      )}
+      <FormattedMessage id="at" />
+      {descritiveSchoolName || schoolName}
+      <FormattedMessage id="course" />:
+      <FormattedMessage id={courseNameId} />
+    </p>
+  </li>
+);
+
 const style = ({ font, sizes }: any) => css`
   padding: ${sizes.margin[500]}px;
   max-width: 550px;
@@ -136,7 +173,7 @@ const style = ({ font, sizes }: any) => css`
 
   ol {
     padding-left: 0;
-    li{
+    li {
       list-style-type: none;
     }
   }
